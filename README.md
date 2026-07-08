@@ -37,3 +37,34 @@ automation projects.
 - Generate System Reports
 - Modular Bash script architecture
 - Comprehensive logging and reporting
+
+- ## Project Structure
+
+```
+Linux-Server-Automation/
+│
+├── lib/                 # Common utility libraries
+│   ├── colors.sh
+│   ├── logger.sh
+│   ├── utils.sh
+│   └── validators.sh
+│
+├── modules/             # Individual automation modules
+│   ├── update_system.sh
+│   ├── upgrade_packages.sh
+│   ├── install_docker.sh
+│   ├── install_nginx.sh
+│   ├── install_awscli.sh
+│   ├── install_devtools.sh
+│   ├── configure_firewall.sh
+│   ├── enable_ssh.sh
+│   ├── create_developer_user.sh
+│   ├── check_system_health.sh
+│   ├── generate_report.sh
+│   └── menu.sh
+│
+├── logs/                # Log files
+├── reports/             # Generated reports
+├── setup.sh             # Main entry point
+└── README.md
+```
