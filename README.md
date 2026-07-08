@@ -110,3 +110,15 @@ chmod +x setup.sh
 4. Generated logs are stored in the `logs/` directory.
 
 5. Generated reports are stored in the `reports/` directory.
+
+## Technologies Used
+
+- Bash Shell Scripting
+- Linux (Ubuntu)
+- Git
+- GitHub
+- UFW Firewall
+- OpenSSH
+- Docker
+- Nginx
+- AWS CLI
