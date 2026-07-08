@@ -122,3 +122,7 @@ chmod +x setup.sh
 - Docker
 - Nginx
 - AWS CLI
+
+ ## License
+
+This project is open-source and intended for educational and learning purposes.
