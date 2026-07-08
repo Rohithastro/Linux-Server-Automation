@@ -38,7 +38,7 @@ automation projects.
 - Modular Bash script architecture
 - Comprehensive logging and reporting
 
-- ## Project Structure
+* ## Project Structure
 
 ```
 Linux-Server-Automation/
