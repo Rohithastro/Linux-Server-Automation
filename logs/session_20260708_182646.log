@@ -1,0 +1,92 @@
+============================================================
+ Session Start : 2026-07-08 18:26:46
+ Project       : Linux Server Automation
+ Version       : 1.0.0
+ Host          : LAPTOP-HFF0EHAA.localdomain
+ User          : root
+ Log Level     : INFO
+ Log File      : /home/rohith/Linux-Server-Automation/logs/session_20260708_182646.log
+============================================================
+[2026-07-08 18:26:46] INFO  Starting Linux Server Automation v1.0.0
+[2026-07-08 18:26:46] WARN  Detected Ubuntu 26.04. Target is 24.04 LTS.
+[2026-07-08 18:26:46] WARN  The script may work but has not been validated on this version.
+[2026-07-08 18:26:46] INFO  Checking network connectivity...
+[2026-07-08 18:26:46] OK    Network reachable (via 1.1.1.1).
+[2026-07-08 18:26:59] INFO  Starting: Install Docker
+[2026-07-08 18:26:59] INFO  Checking network connectivity...
+[2026-07-08 18:26:59] OK    Network reachable (via 1.1.1.1).
+[2026-07-08 18:26:59] INFO  Docker appears to be installed already.
+[2026-07-08 18:27:01] INFO  Prerequisites already satisfied.
+[2026-07-08 18:27:01] INFO  Adding Docker's official GPG key...
+[2026-07-08 18:27:02] OK    Docker GPG key installed at /etc/apt/keyrings/docker.asc.
+[2026-07-08 18:27:02] INFO  Configuring Docker repository (arch=amd64, codename=resolute)...
+[2026-07-08 18:27:02] OK    Docker repository configured at /etc/apt/sources.list.d/docker.list.
+[2026-07-08 18:27:02] INFO  Refreshing apt package index...
+----- apt upgrade output -----
+Hit:1 https://download.docker.com/linux/ubuntu resolute InRelease
+Hit:2 http://security.ubuntu.com/ubuntu resolute-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu resolute InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu resolute-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu resolute-backports InRelease
+Reading package lists...
+----- end apt upgrade output -----
+[2026-07-08 18:27:04] INFO  Installing Docker packages: docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+----- apt upgrade output -----
+Reading package lists...
+Building dependency tree...
+Reading state information...
+docker-ce is already the newest version (5:29.6.1-1~ubuntu.26.04~resolute).
+docker-ce-cli is already the newest version (5:29.6.1-1~ubuntu.26.04~resolute).
+containerd.io is already the newest version (2.2.5-1~ubuntu.26.04~resolute).
+docker-buildx-plugin is already the newest version (0.35.0-1~ubuntu.26.04~resolute).
+docker-compose-plugin is already the newest version (5.3.1-1~ubuntu.26.04~resolute).
+Solving dependencies...
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+----- end apt upgrade output -----
+[2026-07-08 18:27:06] ERROR docker.service unit not found; installation may be incomplete.
+[2026-07-08 18:28:33] ERROR Failed: Install Docker (exit code 3)
+[2026-07-08 18:28:42] INFO  Starting: Install AWS CLI
+[2026-07-08 18:28:42] INFO  Checking network connectivity...
+[2026-07-08 18:28:42] OK    Network reachable (via 1.1.1.1).
+[2026-07-08 18:28:44] INFO  AWS CLI v2 appears to be installed already.
+[2026-07-08 18:28:46] INFO  Downloading AWS CLI installer from https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+[2026-07-08 18:28:57] OK    Installer downloaded (70M).
+[2026-07-08 18:28:57] INFO  Extracting installer...
+[2026-07-08 18:28:59] OK    Installer extracted.
+[2026-07-08 18:28:59] INFO  Running AWS CLI installer (reinstall)...
+Found same AWS CLI version: /usr/local/aws-cli/v2/2.35.17. Skipping install.
+[2026-07-08 18:29:02] OK    AWS CLI v2 installed and verified.
+[2026-07-08 18:29:07] OK    Completed: Install AWS CLI
+[2026-07-08 18:29:10] INFO  Starting: Configure Firewall
+[2026-07-08 18:29:10] INFO  Checking network connectivity...
+[2026-07-08 18:29:10] OK    Network reachable (via 1.1.1.1).
+[2026-07-08 18:29:10] WARN  This will enable UFW and allow only the listed ports inbound.
+[2026-07-08 18:29:10] WARN  Ensure SSH access (port 22) is intended before continuing.
+[2026-07-08 18:29:12] INFO  UFW is already installed.
+[2026-07-08 18:29:12] INFO  Setting default policy: deny incoming, allow outgoing.
+[2026-07-08 18:29:17] INFO  Rule already present: 22/tcp (SSH)
+[2026-07-08 18:29:17] INFO  Rule already present: 80/tcp (HTTP)
+[2026-07-08 18:29:18] INFO  Rule already present: 443/tcp (HTTPS)
+[2026-07-08 18:29:18] INFO  No additional ports requested.
+[2026-07-08 18:29:18] INFO  UFW is already active.
+[2026-07-08 18:29:18] INFO  Reloading UFW...
+[2026-07-08 18:29:20] OK    UFW configured successfully.
+[2026-07-08 18:29:30] OK    Completed: Configure Firewall
+[2026-07-08 18:33:20] INFO  Starting: Create Developer User
+[2026-07-08 18:33:31] INFO  Planned changes:
+[2026-07-08 18:33:31] INFO    username : rohi
+[2026-07-08 18:33:31] INFO    full name: rohith
+[2026-07-08 18:33:31] INFO    shell    : /bin/bash
+[2026-07-08 18:33:31] INFO    home     : /home/rohi
+[2026-07-08 18:33:31] INFO    existing : false
+[2026-07-08 18:33:35] INFO  Running: useradd --create-home --shell /bin/bash --user-group --comment rohith rohi
+[2026-07-08 18:33:35] OK    User 'rohi' created.
+[2026-07-08 18:33:41] INFO  Adding 'rohi' to group 'sudo'...
+[2026-07-08 18:33:41] OK    'rohi' added to 'sudo'.
+[2026-07-08 18:33:43] INFO  Adding 'rohi' to group 'docker'...
+[2026-07-08 18:33:43] OK    'rohi' added to 'docker'.
+[2026-07-08 18:33:43] INFO  Generating a secure one-time password...
+[2026-07-08 18:33:43] ERROR Failed to generate a password of the required length.
+[2026-07-08 18:38:47] ERROR Failed: Create Developer User (exit code 5)
+[2026-07-08 18:38:52] INFO  Goodbye.
+[2026-07-08 18:38:52] INFO  Session ended successfully.

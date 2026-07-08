@@ -1,0 +1,16 @@
+====================================================
+  Linux Server Automation - System Report
+  Generated: 2026-07-08 18:23:28 UTC
+====================================================
+
+====================================================
+GENERAL INFORMATION
+====================================================
+  Project Name             : Linux Server Automation
+  Project Version          : 1.0.0
+  Generated At             : 2026-07-08 18:23:28 UTC
+  Hostname                 : LAPTOP-HFF0EHAA.localdomain
+  Current User             : root
+  Operating System         : Ubuntu 26.04 LTS
+  Kernel Version           : Linux 6.18.33.1-microsoft-standard-WSL2
+  Uptime                   : up 5 hours, 35 minutes

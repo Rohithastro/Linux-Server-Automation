@@ -1,0 +1,16 @@
+============================================================
+ Session Start : 2026-07-08 18:25:58
+ Project       : Linux Server Automation
+ Version       : 1.0.0
+ Host          : LAPTOP-HFF0EHAA.localdomain
+ User          : root
+ Log Level     : INFO
+ Log File      : /home/rohith/Linux-Server-Automation/logs/session_20260708_182558.log
+============================================================
+[2026-07-08 18:25:58] INFO  Starting Linux Server Automation v1.0.0
+[2026-07-08 18:25:58] WARN  Detected Ubuntu 26.04. Target is 24.04 LTS.
+[2026-07-08 18:25:58] WARN  The script may work but has not been validated on this version.
+[2026-07-08 18:25:58] INFO  Checking network connectivity...
+[2026-07-08 18:25:58] OK    Network reachable (via 1.1.1.1).
+[2026-07-08 18:26:02] INFO  Goodbye.
+[2026-07-08 18:26:02] INFO  Session ended successfully.

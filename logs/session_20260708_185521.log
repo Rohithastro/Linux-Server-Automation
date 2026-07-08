@@ -1,0 +1,81 @@
+============================================================
+ Session Start : 2026-07-08 18:55:21
+ Project       : Linux Server Automation
+ Version       : 1.0.0
+ Host          : LAPTOP-HFF0EHAA.localdomain
+ User          : root
+ Log Level     : INFO
+ Log File      : /home/rohith/Linux-Server-Automation/logs/session_20260708_185521.log
+============================================================
+[2026-07-08 18:55:21] INFO  Starting Linux Server Automation v1.0.0
+[2026-07-08 18:55:21] WARN  Detected Ubuntu 26.04. Target is 24.04 LTS.
+[2026-07-08 18:55:21] WARN  The script may work but has not been validated on this version.
+[2026-07-08 18:55:21] INFO  Checking network connectivity...
+[2026-07-08 18:55:21] OK    Network reachable (via 1.1.1.1).
+[2026-07-08 18:55:24] INFO  Starting: Create Developer User
+[2026-07-08 18:55:35] WARN  User 'rohi' already exists.
+[2026-07-08 18:55:48] INFO  Planned changes:
+[2026-07-08 18:55:48] INFO    username : rohi
+[2026-07-08 18:55:48] INFO    full name: Rohith Rajesh
+[2026-07-08 18:55:48] INFO    shell    : /bin/bash
+[2026-07-08 18:55:48] INFO    home     : /home/rohi
+[2026-07-08 18:55:48] INFO    existing : true
+[2026-07-08 18:55:54] INFO  User 'rohi' is already in group 'sudo'.
+[2026-07-08 18:56:00] INFO  User 'rohi' is already in group 'docker'.
+[2026-07-08 18:56:00] INFO  Generating a secure one-time password...
+[2026-07-08 18:56:01] OK    Developer user 'rohi' is ready.
+[2026-07-08 18:56:39] OK    Completed: Create Developer User
+[2026-07-08 18:56:44] INFO  Starting: Configure Firewall
+[2026-07-08 18:56:44] INFO  Checking network connectivity...
+[2026-07-08 18:56:44] OK    Network reachable (via 1.1.1.1).
+[2026-07-08 18:56:44] WARN  This will enable UFW and allow only the listed ports inbound.
+[2026-07-08 18:56:44] WARN  Ensure SSH access (port 22) is intended before continuing.
+[2026-07-08 18:56:45] INFO  UFW is already installed.
+[2026-07-08 18:56:45] INFO  Setting default policy: deny incoming, allow outgoing.
+[2026-07-08 18:56:51] INFO  Rule already present: 22/tcp (SSH)
+[2026-07-08 18:56:51] INFO  Rule already present: 80/tcp (HTTP)
+[2026-07-08 18:56:51] INFO  Rule already present: 443/tcp (HTTPS)
+[2026-07-08 18:56:56] INFO  UFW is already active.
+[2026-07-08 18:56:56] INFO  Reloading UFW...
+[2026-07-08 18:56:59] OK    UFW configured successfully.
+[2026-07-08 18:59:44] OK    Completed: Configure Firewall
+[2026-07-08 18:59:47] INFO  Starting: Install Nginx
+[2026-07-08 18:59:47] INFO  Checking network connectivity...
+[2026-07-08 18:59:47] OK    Network reachable (via 1.1.1.1).
+[2026-07-08 18:59:50] INFO  Running: apt-get install nginx
+----- apt upgrade output -----
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following additional packages will be installed:
+  nginx-common
+Suggested packages:
+  fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  nginx nginx-common
+0 upgraded, 2 newly installed, 0 to remove and 2 not upgraded.
+Need to get 654 kB of archives.
+After this operation, 1860 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 nginx-common all 1.28.3-2ubuntu1.6 [37.3 kB]
+Get:2 http://archive.ubuntu.com/ubuntu resolute-updates/main amd64 nginx amd64 1.28.3-2ubuntu1.6 [616 kB]
+Preconfiguring packages ...
+Fetched 654 kB in 1s (437 kB/s)
+Selecting previously unselected package nginx-common.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 43342 files and directories currently installed.)
+Preparing to unpack .../nginx-common_1.28.3-2ubuntu1.6_all.deb ...
+Unpacking nginx-common (1.28.3-2ubuntu1.6) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../nginx_1.28.3-2ubuntu1.6_amd64.deb ...
+Unpacking nginx (1.28.3-2ubuntu1.6) ...
+Setting up nginx-common (1.28.3-2ubuntu1.6) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/nginx.service' → '/usr/lib/systemd/system/nginx.service'.
+Setting up nginx (1.28.3-2ubuntu1.6) ...
+ * Upgrading binary nginx       [80G [74G[ OK ]
+Processing triggers for man-db (2.13.1-1build1) ...
+Processing triggers for ufw (0.36.2-9build1) ...
+----- end apt upgrade output -----
+[2026-07-08 18:59:59] ERROR nginx.service unit not found; installation incomplete.
+[2026-07-08 19:02:02] ERROR Failed: Install Nginx (exit code 3)
+[2026-07-08 19:02:05] INFO  Goodbye.
+[2026-07-08 19:02:05] INFO  Session ended successfully.
