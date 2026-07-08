@@ -68,3 +68,29 @@ Linux-Server-Automation/
 ├── setup.sh             # Main entry point
 └── README.md
 ```
+
+## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Rohithastro/Linux-Server-Automation.git
+```
+
+### Navigate to the project directory
+
+```bash
+cd Linux-Server-Automation
+```
+
+### Make the main script executable
+
+```bash
+chmod +x setup.sh
+```
+
+### Run the toolkit
+
+```bash
+./setup.sh
+```
