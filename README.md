@@ -94,3 +94,19 @@ chmod +x setup.sh
 ```bash
 ./setup.sh
 ```
+
+## Usage
+
+1. Launch the toolkit by running:
+
+```bash
+./setup.sh
+```
+
+2. Select the desired operation from the interactive menu.
+
+3. Follow the on-screen instructions to complete the selected task.
+
+4. Generated logs are stored in the `logs/` directory.
+
+5. Generated reports are stored in the `reports/` directory.
